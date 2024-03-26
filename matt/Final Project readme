@@ -1,0 +1,14 @@
+
+
+
+The lac_2022*.ipynb files are related to the investigation of the 2022 Los Angeles Chargers' 3rd down conversion modeling. The goal was to determine if a model could be created based on play-by-play data for every game of the 2022 season. The 2022 Chargers were chosen because they had the most 3rd down conversions of any team that season, totaling 112, providing ample data points. Data was obtained game by game from "Pro Football Reference" (https://www.pro-football-reference.com) as .xls files, then combined and saved as a .csv file. While there were not many columns of data, the "Detail" column was written deliberately and consistently, allowing for extraction of significant information using regular expressions. Subsequently, ensemble methods were employed to create models, as they demonstrated much higher accuracy (~90%) compared to the neural network model, which typically achieved only 12% accuracy despite extensive training epochs. Various ensemble methods, including Random Forest, Bootstrap, and Gradient Boost, were utilized, all yielding similar results. However, the high accuracy observed raises suspicions of overfitting, particularly given the confusion matrix indicating very high true negatives (~270) compared to true positives (~20).
+
+References:
+“Pro Football Stats, History, Scores, Standings, Playoffs, Schedule & Records.” Pro Football Reference, Mar. 2024, www.pro-football-reference.com/. 
+
+Géron, Aurélien. Hands-on Machine Learning with Scikit-Learn, Keras and Tensorflow: Concepts, Tools, and Techniques to Build Intelligent Systems. O’Reilly Media, 2019. 
+ 
+“Scikit-Learn.” Scikit, scikit-learn.org/stable/index.html. Accessed 21 Feb. 2024. 
+
+
+
