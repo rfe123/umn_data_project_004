@@ -1,0 +1,81 @@
+games
+- 
+gameId INTEGER PK FK >- plays.gameId
+season INTEGER
+week INTEGER
+gameDate DATE
+gameTimeEastern TIME
+homeTeamAbbr NVARCHAR(5)
+visitorTeamAbbr NVARCHAR(5)
+homeFinalScore INTEGER
+visitorFinalScore INTEGER
+
+players
+- 
+nflId INTEGER PK FK >- plays.ballCarrierId
+height VARCHAR
+weight INTEGER
+birthDate DATE
+collegeName VARCHAR(50)
+position VARCHAR(5)
+displayName VARCHAR(50)
+
+plays
+-
+gameId FK
+playId 
+ballCarrierId
+ballCarrierDisplayName
+playDescription
+quarter
+down
+yardsToGo
+possessionTeam
+defensiveTeam
+yardlineSide
+yardlineNumber
+gameClock
+preSnapHomeScore
+preSnapVisitorScore
+passResult
+passLength
+penaltyYards
+prePenaltyPlayResult
+playResult
+playNullifiedByPenalty
+absoluteYardlineNumber
+offenseFormation
+defendersInTheBox
+passProbability
+preSnapHomeTeamWinProbability
+preSnapVisitorTeamWinProbability
+homeTeamWinProbabilityAdded
+visitorTeamWinProbilityAdded
+expectedPoints
+expectedPointsAdded
+foulName1
+foulName2
+foulNFLId1
+foulNFLId2
+play_uuid VARCHAR PK
+
+tracking
+-
+gameId FK >- games.gameId
+playId FK >- plays.playId
+nflId FK >- players.nflId
+displayName
+frameId
+time
+jerseyNumber
+club
+playDirection
+x
+y
+s
+a
+dis
+o
+dir
+event
+play_uuid VARCHAR PK FK >- plays.play_uuid
